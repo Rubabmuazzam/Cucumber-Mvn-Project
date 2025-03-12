@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven 'maven'
-        JDK 'JDK'
+        maven 'MAVEN'
+        jdk 'JDK'
     }
     options {
         timestamps ()
@@ -16,7 +16,7 @@ pipeline {
     
     parameters {
         string(name: 'TAG_NAME', defaultValue: "@employee", description: 'Scenario Tag to be run')
-        choice(name: 'BRANCH_NAME', choices: ['master', 'Ume'], description: 'Execution on Branch') 
+        choice(name: 'BRANCH_NAME', choices: ['master', 'Ume'], description: 'Execution on Branch')
     }
     
     stages {
